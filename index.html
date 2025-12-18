@@ -704,6 +704,27 @@
             color: #ccc;
         }
         
+        /* Company Branding */
+        .company-branding {
+            text-align: center;
+            padding: 15px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+        
+        .company-name {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #f0b429;
+            margin-bottom: 5px;
+        }
+        
+        .company-powered-by {
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+        
         /* Responsive */
         @media (max-width: 768px) {
             .hero h1 {
@@ -754,12 +775,20 @@
             .logo-text {
                 font-size: 1.5rem;
             }
+            
+            .company-branding {
+                padding: 10px;
+            }
+            
+            .company-name {
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
 <body>
     <!-- WhatsApp Button -->
-    <a href="https://wa.me/+917208513875" class="whatsapp-button" target="_blank">
+    <a href="https://wa.me/+918097008022" class="whatsapp-button" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
     
@@ -780,14 +809,21 @@
             <p><strong>Only 8 units left at this price!</strong> Prices increase after Jan 15, 2026!</p>
             
             <div>
-                <a href="https://wa.me/+917208513875" class="popup-button" target="_blank">
+                <a href="https://wa.me/+918097008022" class="popup-button" target="_blank">
                     <i class="fab fa-whatsapp"></i> CLAIM YOUR DISCOUNT NOW!
                 </a>
-                <a href="tel:+917208513875" class="popup-button call">
+                <a href="tel:+918097008022" class="popup-button call">
                     <i class="fas fa-phone"></i> CALL FOR FREE CONSULTATION
                 </a>
             </div>
-            <p class="popup-timer"><i class="fas fa-clock"></i> Offer expires in: <span id="popupCountdown">30</span> seconds</p>
+            
+            <!-- Company Branding -->
+            <div class="company-branding">
+                <div class="company-name">Propcheck India</div>
+                <div class="company-powered-by">powered by PURAVANKARA</div>
+            </div>
+            
+            <p class="popup-timer"><i class="fas fa-clock"></i> Offer expires in: <span id="popupCountdown">60</span> seconds</p>
             <p style="margin-top: 10px; font-size: 0.9rem; color: #ccc;">Limited spots available. Don't let this luxury escape you!</p>
         </div>
     </div>
@@ -805,10 +841,10 @@
                                 <stop offset="100%" style="stop-color:#ffd700;stop-opacity:1" />
                             </linearGradient>
                         </defs>
-                        <text x="10" y="35" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="url(#logoGradient)">PURAVANKARA</text>
+                        <text x="10" y="35" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="url(#logoGradient)">Propcheck </text>
                     </svg>
                 </div>
-                <div class="logo-text" style="color: white;">Luxury Residences</div>
+                <div class="logo-text" style="color: white;">India</div>
             </div>
             <div class="header-highlight">
                 🔥 Pre-Launch Offer | Book Before 15-01-2026
@@ -824,6 +860,12 @@
             <div class="location">
                 <i class="fas fa-map-marker-alt"></i>
                 <span>Now at Lokhandwala Circle, Andheri West</span>
+            </div>
+            
+            <!-- Company Branding in Hero -->
+            <div class="company-branding" style="margin-top: 30px; max-width: 500px; margin-left: auto; margin-right: auto;">
+                <div class="company-name">Propcheck India</div>
+                <div class="company-powered-by">powered by PURAVANKARA</div>
             </div>
         </div>
     </section>
@@ -1132,10 +1174,17 @@
                 </div>
                 
                 <div class="footer-section">
-                    <h3>Contact Puravankara</h3>
+                    <h3>Contact Us</h3>
                     <p>For best prices and exclusive offers:</p>
-                    <p><i class="fab fa-whatsapp" style="color: #25D366;"></i> WhatsApp: +91 72085 13875</p>
-                    <p><i class="fas fa-phone"></i> Call: +91 72085 13875</p>
+                    <p><i class="fab fa-whatsapp" style="color: #25D366;"></i> WhatsApp: +91 80970 08022</p>
+                    <p><i class="fas fa-phone"></i> Call: +91 80970 08022</p>
+                    
+                    <!-- Company Branding in Footer -->
+                    <div class="company-branding" style="margin-top: 15px;">
+                        <div class="company-name">Propcheck India</div>
+                        <div class="company-powered-by">powered by PURAVANKARA</div>
+                    </div>
+                    
                     <a href="https://www.puravankara.com/" target="_blank" class="website-link">
                         <i class="fas fa-globe"></i> Visit Our Website
                     </a>
@@ -1154,6 +1203,12 @@
                 <p>&copy; 2025 Puravankara Limited. All rights reserved.</p>
                 <p>Prices are subject to change without prior notice. EOI amounts are refundable as per terms and conditions.</p>
                 <p style="margin-top: 10px;"><a href="https://www.puravankara.com/" target="_blank" style="color: #f0b429; text-decoration: none;">www.puravankara.com</a></p>
+                
+                <!-- Final Company Branding -->
+                <div class="company-branding" style="margin-top: 15px; background-color: rgba(255, 255, 255, 0.05);">
+                    <div class="company-name">Propcheck India</div>
+                    <div class="company-powered-by">powered by PURAVANKARA</div>
+                </div>
             </div>
         </div>
     </footer>
@@ -1166,7 +1221,7 @@
             const popupCountdown = document.getElementById('popupCountdown');
             let popupTimer;
             let countdownTimer;
-            const POPUP_INTERVAL = 30000; // 30 seconds = 30000 milliseconds
+            const POPUP_INTERVAL = 120000; // 2 minutes = 120000 milliseconds (changed from 30 seconds)
             
             // Function to show popup
             function showPopup() {
@@ -1175,14 +1230,14 @@
                 
                 // Reset timer for next popup
                 popupTimer = setTimeout(showPopup, POPUP_INTERVAL);
-                console.log('🚀 Popup shown! Next popup in ' + (POPUP_INTERVAL/1000) + ' seconds.');
+                console.log('🚀 Popup shown! Next popup in ' + (POPUP_INTERVAL/1000) + ' seconds (2 minutes).');
             }
             
             // Function to hide popup
             function hidePopup() {
                 popup.style.display = 'none';
                 clearTimeout(countdownTimer);
-                console.log('Popup closed. Next popup in ' + (POPUP_INTERVAL/1000) + ' seconds.');
+                console.log('Popup closed. Next popup in ' + (POPUP_INTERVAL/1000) + ' seconds (2 minutes).');
             }
             
             // Countdown function
@@ -1271,7 +1326,11 @@
             });
             
             // Log when popup is scheduled
-            console.log('🎯 Popup will appear every ' + (POPUP_INTERVAL/1000) + ' seconds to maximize conversions!');
+            console.log('🎯 Popup will appear every ' + (POPUP_INTERVAL/1000) + ' seconds (2 minutes) to maximize conversions!');
+            
+            // Log company branding
+            console.log('🏢 Company updated to: Propcheck India powered by PURAVANKARA');
+            console.log('📱 WhatsApp number updated to: +918097008022');
         });
     </script>
 </body>
