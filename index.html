@@ -60,19 +60,229 @@
         }
         
         .header-highlight {
-            font-size: 0.9rem;
-            background: linear-gradient(45deg, #f0b429, #ffd700);
-            color: #1a3a5f;
-            padding: 8px 15px;
+            font-size: 1rem;
+            background: linear-gradient(45deg, #ff0000, #ff9900, #ffd700, #ff9900, #ff0000);
+            background-size: 400% 400%;
+            color: white;
+            padding: 10px 20px;
             border-radius: 30px;
-            font-weight: 600;
-            animation: pulse 2s infinite;
+            font-weight: 700;
+            animation: pulse 1.5s infinite, gradientFlow 3s infinite alternate;
+            box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
         }
         
         @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
+            0% { transform: scale(1); box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3); }
+            50% { transform: scale(1.08); box-shadow: 0 6px 25px rgba(255, 0, 0, 0.5); }
+            100% { transform: scale(1); box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3); }
+        }
+        
+        @keyframes gradientFlow {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+        
+        /* AI WhatsApp Assistant with Beautiful Lady Photo */
+        .ai-whatsapp-assistant {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1001;
+            cursor: pointer;
+        }
+        
+        .ai-robot-icon {
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            color: white;
+            width: 85px;
+            height: 85px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.7);
+            transition: all 0.3s ease;
+            position: relative;
+            animation: float 3s ease-in-out infinite;
+            overflow: hidden;
+            border: 4px solid white;
+        }
+        
+        .ai-robot-icon:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 40px rgba(37, 211, 102, 0.9);
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-12px); }
+        }
+        
+        .lady-avatar {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: all 0.3s ease;
+        }
+        
+        .ai-robot-icon:hover .lady-avatar {
+            transform: scale(1.05);
+        }
+        
+        .robot-badge {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background: #ff4081;
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            border: 3px solid white;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.25);
+            z-index: 2;
+            animation: pulseBadge 2s infinite;
+        }
+        
+        @keyframes pulseBadge {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        
+        .ai-message-popup {
+            position: absolute;
+            bottom: 105px;
+            right: 0;
+            background: white;
+            color: #333;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+            width: 300px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+            pointer-events: none;
+            border-left: 5px solid #25D366;
+        }
+        
+        .ai-message-popup:before {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            right: 30px;
+            border-width: 10px 10px 0;
+            border-style: solid;
+            border-color: white transparent transparent;
+        }
+        
+        .ai-whatsapp-assistant:hover .ai-message-popup {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+        
+        .message-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        
+        .message-avatar {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #25D366;
+        }
+        
+        .message-title {
+            flex: 1;
+        }
+        
+        .message-title h4 {
+            color: #25D366;
+            margin-bottom: 3px;
+            font-size: 1.15rem;
+            font-weight: 700;
+        }
+        
+        .message-title .status {
+            color: #666;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #4CAF50;
+            border-radius: 50%;
+            animation: blink 2s infinite;
+        }
+        
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        
+        .ai-message-popup p {
+            font-size: 0.92rem;
+            line-height: 1.5;
+            margin-bottom: 12px;
+            color: #555;
+        }
+        
+        .message-highlight {
+            background: linear-gradient(45deg, #ffd6e7, #ffe6f2);
+            padding: 10px 12px;
+            border-radius: 10px;
+            margin: 12px 0;
+            border-left: 3px solid #ff4081;
+        }
+        
+        .cta-button {
+            display: block;
+            width: 100%;
+            background: linear-gradient(45deg, #25D366, #1da851);
+            color: white;
+            padding: 14px;
+            border-radius: 12px;
+            font-weight: 700;
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 15px;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        }
+        
+        .cta-button:hover {
+            background: linear-gradient(45deg, #1da851, #25D366);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.5);
+        }
+        
+        .whatsapp-icon {
+            margin-right: 8px;
+            font-size: 1.1rem;
         }
         
         /* Hero Section */
@@ -447,32 +657,6 @@
             font-size: 0.9rem;
         }
         
-        /* WhatsApp Button */
-        .whatsapp-button {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background-color: #25D366;
-            color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 30px;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
-            z-index: 999;
-            transition: all 0.3s ease;
-            text-decoration: none;
-        }
-        
-        .whatsapp-button:hover {
-            background-color: #1da851;
-            transform: scale(1.1);
-            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
-        }
-        
         /* WhatsApp Link for Floor Plans */
         .whatsapp-link {
             display: inline-block;
@@ -686,12 +870,27 @@
                 max-width: 300px;
             }
             
-            .whatsapp-button {
+            .ai-whatsapp-assistant {
                 bottom: 20px;
                 right: 20px;
-                width: 55px;
-                height: 55px;
-                font-size: 26px;
+            }
+            
+            .ai-robot-icon {
+                width: 75px;
+                height: 75px;
+                font-size: 28px;
+            }
+            
+            .ai-message-popup {
+                width: 260px;
+                bottom: 95px;
+                right: -20px;
+            }
+            
+            .robot-badge {
+                width: 28px;
+                height: 28px;
+                font-size: 14px;
             }
             
             .logo-img {
@@ -705,10 +904,44 @@
     </style>
 </head>
 <body>
-    <!-- WhatsApp Button -->
-    <a href="https://wa.me/+918097914222" class="whatsapp-button" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+    <!-- AI WhatsApp Assistant with Beautiful 23-year-old Lady -->
+    <div class="ai-whatsapp-assistant" onclick="window.open('https://wa.me/+918097914222?text=Hi%20Sophia!%20I%20am%20interested%20in%20Puravankara%20project%20and%20would%20like%20to%20know%20more%20details', '_blank')">
+        <div class="ai-robot-icon">
+            <!-- Beautiful 23-year-old Lady Photo - High Quality & Realistic -->
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Sophia - AI Assistant" class="lady-avatar">
+            <div class="robot-badge">
+                <i class="fas fa-robot"></i>
+            </div>
+        </div>
+        <div class="ai-message-popup">
+            <div class="message-header">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Sophia" class="message-avatar">
+                <div class="message-title">
+                    <h4>Sophia - AI Assistant</h4>
+                    <div class="status">
+                        <div class="status-dot"></div>
+                        <span>Online • 23 • Ready to help</span>
+                    </div>
+                </div>
+            </div>
+            <p>✨ <strong>Hi there! I'm Sophia, your 23-year-old AI assistant!</strong></p>
+            <p>I'm here on WhatsApp to make your property search easy and enjoyable! 🏡</p>
+            
+            <div class="message-highlight">
+                <strong>I can help you with:</strong><br>
+                • 2/3/4 BHK floor plans<br>
+                • Special pre-launch pricing<br>
+                • Virtual property tours<br>
+                • Booking assistance
+            </div>
+            
+            <p><em>"Let's chat! I'm friendly, quick to respond, and here to help you find your dream home! 💖"</em></p>
+            
+            <button class="cta-button" onclick="window.open('https://wa.me/+918097914222?text=Hi%20Sophia!%20I%20am%20interested%20in%20Puravankara%20project%20and%20would%20like%20to%20know%20more%20details', '_blank')">
+                <i class="fab fa-whatsapp whatsapp-icon"></i> Chat with Sophia on WhatsApp
+            </button>
+        </div>
+    </div>
     
     <!-- Header -->
     <header>
@@ -876,12 +1109,12 @@
         
         <div class="floorplans-container">
             <!-- Tower 1 Floor Plan -->
-            <div class="floorplan-card" onclick="window.open('https://wa.me/+918097914222?text=Hi! I am interested in Tower-1 floor plan (10th-12th, 14th-18th floors)', '_blank')" style="cursor: pointer;">
+            <div class="floorplan-card" onclick="window.open('https://wa.me/+918097914222?text=Hi%20Sophia!%20I%20am%20interested%20in%20Tower-1%20floor%20plan%20(10th-12th,%2014th-18th%20floors)', '_blank')" style="cursor: pointer;">
                 <div style="position: relative;">
                     <img src="image.png" alt="Tower-1 Floor Plan: 10th to 12th, 14th to 18th Floor" class="floorplan-img">
                     <div class="floorplan-overlay">
                         <i class="fab fa-whatsapp"></i>
-                        <p>Click for WhatsApp Details</p>
+                        <p>Click to Chat with Sophia</p>
                     </div>
                 </div>
                 <div class="floorplan-content">
@@ -895,12 +1128,12 @@
             </div>
             
             <!-- Tower 4 Floor Plan -->
-            <div class="floorplan-card" onclick="window.open('https://wa.me/+918097914222?text=Hi! I am interested in Tower-4 floor plan details', '_blank')" style="cursor: pointer;">
+            <div class="floorplan-card" onclick="window.open('https://wa.me/+918097914222?text=Hi%20Sophia!%20I%20am%20interested%20in%20Tower-4%20floor%20plan%20details', '_blank')" style="cursor: pointer;">
                 <div style="position: relative;">
                     <img src="image.png" alt="Tower-4 Floor Plan: Standard Floor Layout" class="floorplan-img">
                     <div class="floorplan-overlay">
                         <i class="fab fa-whatsapp"></i>
-                        <p>Click for WhatsApp Details</p>
+                        <p>Click to Chat with Sophia</p>
                     </div>
                 </div>
                 <div class="floorplan-content">
@@ -914,12 +1147,12 @@
             </div>
             
             <!-- Tower 5 Floor Plan -->
-            <div class="floorplan-card" onclick="window.open('https://wa.me/+918097914222?text=Hi! I am interested in Tower-5 floor plan (2nd-5th, 7th & 8th floors)', '_blank')" style="cursor: pointer;">
+            <div class="floorplan-card" onclick="window.open('https://wa.me/+918097914222?text=Hi%20Sophia!%20I%20am%20interested%20in%20Tower-5%20floor%20plan%20(2nd-5th,%207th%20%26%208th%20floors)', '_blank')" style="cursor: pointer;">
                 <div style="position: relative;">
                     <img src="image.png" alt="Tower-5 Floor Plan: 2nd to 5th, 7th & 8th Floor" class="floorplan-img">
                     <div class="floorplan-overlay">
                         <i class="fab fa-whatsapp"></i>
-                        <p>Click for WhatsApp Details</p>
+                        <p>Click to Chat with Sophia</p>
                     </div>
                 </div>
                 <div class="floorplan-content">
@@ -932,8 +1165,6 @@
                 </div>
             </div>
         </div>
-        
-
     </div>
 </section>
 
@@ -1038,8 +1269,8 @@
             </div>
         </div>
         
-        <a href="https://wa.me/+918097914222?text=Hi! I want to avail the pre-launch discount offer" class="whatsapp-link" target="_blank" style="font-size: 1.2rem; padding: 15px 40px;">
-            <i class="fab fa-whatsapp"></i> CLAIM YOUR DISCOUNT NOW
+        <a href="https://wa.me/+918097914222?text=Hi%20Sophia!%20I%20want%20to%20avail%20the%20pre-launch%20discount%20offer%20for%20Puravankara" class="whatsapp-link" target="_blank" style="font-size: 1.2rem; padding: 15px 40px;">
+            <i class="fab fa-whatsapp"></i> CHAT WITH SOPHIA TO CLAIM DISCOUNT
         </a>
     </div>
 </section>
@@ -1137,10 +1368,10 @@
                 observer.observe(card);
             });
             
-            // WhatsApp click tracking
-            document.querySelectorAll('.whatsapp-link, .floorplan-card').forEach(element => {
+            // Click tracking
+            document.querySelectorAll('.whatsapp-link, .floorplan-card, .ai-robot-icon, .cta-button').forEach(element => {
                 element.addEventListener('click', function() {
-                    console.log('📱 User clicked WhatsApp link');
+                    console.log('💬 User clicked to chat with Sophia');
                 });
             });
         });
