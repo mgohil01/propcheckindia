@@ -1181,10 +1181,10 @@
         }
         
         .copyright {
-            font-size: 0.8rem;
+            font-size: 0.7rem; /* Changed from 0.8rem to 0.7rem */
             color: #ccc;
             margin-bottom: 15px;
-            line-height: 1.6;
+            line-height: 1.5;
         }
         
         .company-branding {
@@ -1201,7 +1201,7 @@
         }
         
         .company-powered-by {
-            font-size: 0.85rem;
+            font-size: 0.8rem; /* Changed from 0.85rem to 0.8rem */
             color: #ccc;
         }
         
@@ -1210,6 +1210,7 @@
             text-decoration: none;
             margin-top: 10px;
             display: inline-block;
+            font-size: 0.8rem; /* Added smaller font size */
         }
         
         /* Responsive */
@@ -1727,7 +1728,7 @@
                 
                 <div class="brochure-action">
                     <a href="https://wa.me/+918097914222?text=Hi%20Muskan!%20I%20want%20to%20know%20more%20about%20Clermont%20-%20The%20World%20Living%20Address" class="whatsapp-link" target="_blank" style="font-size: 1.1rem; padding: 15px 35px;">
-                        <i class="fab fa-whatsapp"></i> GET CLERMONT BROCHURE DETAILS
+                        <i class="fab fa-whatsapp"></i> GET BROCHURE DETAILS
                     </a>
                 </div>
             </div>
@@ -1743,43 +1744,99 @@
                     <div class="luxury-subtitle">Puravankara's Legacy of Crafting Homes & Shaping Lifestyles Since 1975</div>
                 </div>
                 
-                <div class="luxury-content">
-                    <div class="luxury-features">
-                        <div class="luxury-feature-item">
-                            <h4><i class="fas fa-chess-king"></i> The Legacy Begins</h4>
-                            <p>Founded in 1975 with a simple belief: "A home built with integrity lasts forever." Started by visionary Mr. Ravi Puravankara, the company has grown into one of India's most trusted real estate brands.</p>
+                <!-- 50 Years Legacy Slider with Attached Images -->
+                <div class="project-slider" style="max-width: 1000px; margin: 40px auto; border-radius: 20px; height: 500px;">
+                    <div class="project-slider-container" id="legacySliderContainer">
+                        <!-- Slide 1: 1975 Beginning -->
+                        <div class="project-slide">
+                            <div style="background: linear-gradient(135deg, #1a3a5f 0%, #2c5282 100%); height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; padding: 40px; text-align: center;">
+                                <div style="font-size: 4rem; font-weight: 900; margin-bottom: 20px; color: #f0b429;">1975</div>
+                                <h3 style="font-size: 2rem; margin-bottom: 20px;">THE BEGINNING</h3>
+                                <p style="font-size: 1.2rem; max-width: 600px; line-height: 1.6;">
+                                    It started with one simple belief that a home built with integrity lasts forever.
+                                </p>
+                                <div style="margin-top: 40px; font-style: italic;">
+                                    "Founding Vision of Mr. Ravi Puravankara"
+                                </div>
+                            </div>
                         </div>
                         
-                        <div class="luxury-feature-item">
-                            <h4><i class="fas fa-chart-line"></i> Growth & Expansion</h4>
-                            <p>From Bengaluru to Mumbai and across 9 major cities, Puravankara has delivered 86+ projects spanning 51+ million sq. ft., creating homes for 2 lakh+ happy residents.</p>
+                        <!-- Slide 2: 1980s-1990s Foundation -->
+                        <div class="project-slide">
+                            <img src="1.png" alt="Puravankara 1980s-1990s Foundation" style="width: 100%; height: 100%; object-fit: cover;">
+                            <div class="project-slide-overlay">
+                                <h4>THE FOUNDATIONAL YEARS</h4>
+                                <p>1980s–1990s: As India's skylines rose, so did Puravankara's imagination.</p>
+                            </div>
                         </div>
                         
-                        <div class="luxury-feature-item">
-                            <h4><i class="fas fa-award"></i> Milestones & Recognition</h4>
-                            <p>Pioneered luxury living in India, listed on stock exchanges in 2007, and won numerous awards including "Developer of the Year" and "Luxury Project of the Year" across decades.</p>
+                        <!-- Slide 3: 2000s-2010s Vision to Vanguard -->
+                        <div class="project-slide">
+                            <img src="2.png" alt="Puravankara 2000s-2010s Vision to Vanguard" style="width: 100%; height: 100%; object-fit: cover;">
+                            <div class="project-slide-overlay">
+                                <h4>FROM VISION TO VANGUARD</h4>
+                                <p>2000s-2010s: Luxury found a new language. Townships became landmarks.</p>
+                            </div>
                         </div>
                         
-                        <div class="luxury-feature-item">
-                            <h4><i class="fas fa-handshake"></i> Trust & Transparency</h4>
-                            <p>Built on pillars of craftsmanship, transparency, and enduring trust. ISO 9001 certified with a four-layer quality check system ensuring every home meets global standards.</p>
+                        <!-- Slide 4: Leadership -->
+                        <div class="project-slide">
+                            <img src="3.png" alt="Puravankara Leadership" style="width: 100%; height: 100%; object-fit: cover;">
+                            <div class="project-slide-overlay">
+                                <h4>THE MINDS BEHIND THE MARVELS</h4>
+                                <p>Mr. Ravi Puravankara & Mr. Ashish R. Puravankara</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 5: Presence in 9 Cities -->
+                        <div class="project-slide">
+                            <img src="4.png" alt="Puravankara Presence in 9 Cities" style="width: 100%; height: 100%; object-fit: cover;">
+                            <div class="project-slide-overlay">
+                                <h4>PRESENCE IN 9 CITIES</h4>
+                                <p>Mumbai, Bengaluru, Chennai, Hyderabad, Pune, Kochi, Coimbatore, Goa, Mangaluru</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 6: Achievements & Stats -->
+                        <div class="project-slide">
+                            <img src="5.png" alt="Puravankara Achievements" style="width: 100%; height: 100%; object-fit: cover;">
+                            <div class="project-slide-overlay">
+                                <h4>PURAVANKARA ACHIEVEMENTS</h4>
+                                <p>2 Lakh+ Happy Residents | 86 Projects Completed | 51 Mn. Sq. Ft. Delivered</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 7: 2025 Fifty Years Young -->
+                        <div class="project-slide">
+                            <div style="background: linear-gradient(135deg, #2c5282 0%, #1a3a5f 100%); height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; padding: 40px; text-align: center;">
+                                <div style="font-size: 5rem; font-weight: 900; margin-bottom: 20px; color: #f0b429;">50</div>
+                                <div style="font-size: 2rem; margin-bottom: 10px; color: #f0b429;">FIFTY YEARS YOUNG</div>
+                                <h3 style="font-size: 1.8rem; margin-bottom: 20px;">2025 MILESTONE</h3>
+                                <p style="font-size: 1.2rem; max-width: 600px; line-height: 1.6;">
+                                    Eighty-six masterpieces later, Puravankara stands at the golden milestone of fifty years. A journey measured not in square feet, but in stories, families, and futures built with care.
+                                </p>
+                                <div style="display: flex; gap: 30px; margin-top: 30px; flex-wrap: wrap; justify-content: center;">
+                                    <div style="text-align: center;">
+                                        <div style="font-size: 2rem; font-weight: 900; color: #f0b429;">86+</div>
+                                        <div>Projects Completed</div>
+                                    </div>
+                                    <div style="text-align: center;">
+                                        <div style="font-size: 2rem; font-weight: 900; color: #f0b429;">2L+</div>
+                                        <div>Happy Residents</div>
+                                    </div>
+                                    <div style="text-align: center;">
+                                        <div style="font-size: 2rem; font-weight: 900; color: #f0b429;">51M+</div>
+                                        <div>Sq. Ft. Delivered</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    
-                    <div class="luxury-gallery">
-                        <div class="luxury-gallery-item">
-                            <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Puravankara Legacy">
-                        </div>
-                        <div class="luxury-gallery-item">
-                            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Quality Craftsmanship">
-                        </div>
-                        <div class="luxury-gallery-item">
-                            <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Luxury Living">
-                        </div>
-                        <div class="luxury-gallery-item">
-                            <img src="https://images.unsplash.com/photo-1487956382158-bb926046304a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Award-Winning Projects">
-                        </div>
+                    <div class="project-slider-nav">
+                        <button class="project-slider-btn" id="legacyPrevBtn">‹</button>
+                        <button class="project-slider-btn" id="legacyNextBtn">›</button>
                     </div>
+                    <div class="project-slider-dots" id="legacySliderDots"></div>
                 </div>
                 
                 <div class="brochure-action" style="background: rgba(255, 255, 255, 0.1);">
@@ -1875,7 +1932,7 @@
                 </div>
                 
                 <div class="company-branding">
-                    <div class="company-name">Propcheck India</div>
+                    <div class="company-name"></div>
                     <div class="company-powered-by">powered by PURAVANKARA</div>
                 </div>
             </div>
@@ -1941,7 +1998,7 @@
             
             // Project Slider in Clermont Section
             const projectSliderContainer = document.getElementById('projectSliderContainer');
-            const projectSlides = document.querySelectorAll('.project-slide');
+            const projectSlides = document.querySelectorAll('#projectSliderContainer .project-slide');
             const projectPrevBtn = document.getElementById('projectPrevBtn');
             const projectNextBtn = document.getElementById('projectNextBtn');
             const projectSliderDots = document.getElementById('projectSliderDots');
@@ -1963,7 +2020,7 @@
                 projectSliderContainer.style.transform = `translateX(-${currentProjectSlide * 100}%)`;
                 
                 // Update project slider dots
-                document.querySelectorAll('.project-slider-dot').forEach((dot, index) => {
+                document.querySelectorAll('#projectSliderDots .project-slider-dot').forEach((dot, index) => {
                     dot.classList.toggle('active', index === currentProjectSlide);
                 });
             }
@@ -1992,6 +2049,62 @@
             
             // Auto slide every 4 seconds for project slider
             setInterval(nextProjectSlide, 4000);
+            
+            // Legacy Slider Functionality
+            const legacySliderContainer = document.getElementById('legacySliderContainer');
+            const legacySlides = document.querySelectorAll('#legacySliderContainer .project-slide');
+            const legacyPrevBtn = document.getElementById('legacyPrevBtn');
+            const legacyNextBtn = document.getElementById('legacyNextBtn');
+            const legacySliderDots = document.getElementById('legacySliderDots');
+            
+            if (legacySliderContainer && legacySlides.length > 0) {
+                let currentLegacySlide = 0;
+                const totalLegacySlides = legacySlides.length;
+                
+                // Create dots for legacy slider
+                legacySlides.forEach((_, index) => {
+                    const dot = document.createElement('div');
+                    dot.classList.add('project-slider-dot');
+                    if (index === 0) dot.classList.add('active');
+                    dot.addEventListener('click', () => goToLegacySlide(index));
+                    legacySliderDots.appendChild(dot);
+                });
+                
+                // Update legacy slider position
+                function updateLegacySlider() {
+                    legacySliderContainer.style.transform = `translateX(-${currentLegacySlide * 100}%)`;
+                    
+                    // Update legacy slider dots
+                    document.querySelectorAll('#legacySliderDots .project-slider-dot').forEach((dot, index) => {
+                        dot.classList.toggle('active', index === currentLegacySlide);
+                    });
+                }
+                
+                // Next legacy slide
+                function nextLegacySlide() {
+                    currentLegacySlide = (currentLegacySlide + 1) % totalLegacySlides;
+                    updateLegacySlider();
+                }
+                
+                // Previous legacy slide
+                function prevLegacySlide() {
+                    currentLegacySlide = (currentLegacySlide - 1 + totalLegacySlides) % totalLegacySlides;
+                    updateLegacySlider();
+                }
+                
+                // Go to specific legacy slide
+                function goToLegacySlide(index) {
+                    currentLegacySlide = index;
+                    updateLegacySlider();
+                }
+                
+                // Event listeners for legacy slider
+                if (legacyPrevBtn) legacyPrevBtn.addEventListener('click', prevLegacySlide);
+                if (legacyNextBtn) legacyNextBtn.addEventListener('click', nextLegacySlide);
+                
+                // Auto slide every 5 seconds for legacy slider
+                setInterval(nextLegacySlide, 5000);
+            }
             
             // Video Functionality
             const videoWrapper = document.getElementById('videoWrapper');
